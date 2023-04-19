@@ -7,6 +7,7 @@ import { LandingComponent } from './landing/landing.component';
 import { ProfileComponent } from './profile/profile.component';
 import { SignupComponent } from './signup/signup.component';
 
+
 @NgModule({
     imports: [
         CommonModule,
@@ -16,7 +17,8 @@ import { SignupComponent } from './signup/signup.component';
     declarations: [
         LandingComponent,
         SignupComponent,
-        ProfileComponent
+        ProfileComponent,
+        
     ]
 })
 export class ExamplesModule { }
