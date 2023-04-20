@@ -6,6 +6,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LandingComponent } from './landing/landing.component';
 import { ProfileComponent } from './profile/profile.component';
 import { SignupComponent } from './signup/signup.component';
+import { ListCategoryComponent } from './admin/list-category/list-category.component';
+import { ListProductComponent } from './admin/list-product/list-product.component';
+import { ProductsComponent } from './shop/products/products.component';
 
 
 @NgModule({
@@ -13,11 +16,18 @@ import { SignupComponent } from './signup/signup.component';
         CommonModule,
         FormsModule,
         NgbModule,
+        
+        
+
     ],
     declarations: [
         LandingComponent,
         SignupComponent,
         ProfileComponent,
+        ListProductComponent,
+        ListCategoryComponent,
+        ProductsComponent
+
         
     ]
 })
