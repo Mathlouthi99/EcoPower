@@ -9,6 +9,12 @@ import { SignupComponent } from './signup/signup.component';
 import { ListCategoryComponent } from './admin/list-category/list-category.component';
 import { ListProductComponent } from './admin/list-product/list-product.component';
 import { ProductsComponent } from './shop/products/products.component';
+import { CartComponent } from './shop/cart/cart.component';
+import { CategoryProductComponent } from './shop/category-product/category-product.component';
+import { ProductbycatComponent } from './shop/productbycat/productbycat.component';
+import { SingleProductComponent } from './shop/single-product/single-product.component';
+import { DashboardComponent } from './admin/dashboard/dashboard.component';
+import { SidebarComponent } from './admin/sidebar/sidebar.component';
 
 
 @NgModule({
@@ -26,7 +32,13 @@ import { ProductsComponent } from './shop/products/products.component';
         ProfileComponent,
         ListProductComponent,
         ListCategoryComponent,
-        ProductsComponent
+        ProductsComponent,
+        CartComponent,
+        CategoryProductComponent,
+        ProductbycatComponent,
+        SingleProductComponent,
+        DashboardComponent,
+        SidebarComponent
 
         
     ]

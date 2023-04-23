@@ -4605,7 +4605,8 @@ textarea.form-control-lg {
     display: flex;
     flex-wrap: inherit;
     align-items: center;
-    justify-content: space-between
+    justify-content: space-between;
+    background-color: #354c64;
 }
 
 .navbar-brand {
@@ -8489,7 +8490,7 @@ textarea.form-control-lg {
 
 .py-5 {
     padding-top: 2rem !important;
-    padding-bottom: 2rem !important
+    padding-bottom: 2rem !important;
 }
 
 .pt-0 {

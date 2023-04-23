@@ -12,6 +12,8 @@ import { ListCategoryComponent } from './examples/admin/list-category/list-categ
 import { NucleoiconsComponent } from './components/nucleoicons/nucleoicons.component';
 import { ListProductComponent } from './examples/admin/list-product/list-product.component';
 import { ProductsComponent } from './examples/shop/products/products.component';
+import { ProductbycatComponent } from './examples/shop/productbycat/productbycat.component';
+import { DashboardComponent } from './examples/admin/dashboard/dashboard.component';
 
 const routes: Routes =[
     { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -22,7 +24,11 @@ const routes: Routes =[
     { path: 'nucleoicons',      component: NucleoiconsComponent },
     {path: 'listProduct', component: ListProductComponent },
     {path: 'listCategory', component: ListCategoryComponent},
-    {path: 'products', component: ProductsComponent }
+    {path: 'products', component: ProductsComponent },
+    {path: 'listProduct/:id', component: ProductbycatComponent },
+    {path: 'dashboard', component: DashboardComponent }
+
+
 
 ];
 

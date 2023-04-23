@@ -333,7 +333,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 }
 
 .navbar-transparent {
-  background-color: transparent !important;
+  background-color: #40576d !important;
   border-bottom: 1px solid transparent;
 }
 
@@ -2460,7 +2460,7 @@ textarea.form-control {
 }
 
 .navbar-transparent {
-  background: transparent !important;
+  background: #364d66!important;
   border-bottom: 1px solid transparent;
   box-shadow: none;
 }
@@ -4299,7 +4299,7 @@ textarea.form-control {
 /*          Changes for small display      */
 @media (max-width: 767px) {
   .navbar-transparent {
-    background-color: rgba(0, 0, 0, 0.45);
+    background-color:#40576d;
   }
 
   body {
