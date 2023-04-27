@@ -11,6 +11,10 @@ import { FooterComponent } from './shared/footer/footer.component';
 
 import { ComponentsModule } from './components/components.module';
 import { ExamplesModule } from './examples/examples.module';
+import { ProductService } from './services/product.service';
+import { CategoryProductService } from './services/category-product.service';
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 @NgModule({
@@ -27,8 +31,9 @@ import { ExamplesModule } from './examples/examples.module';
     ComponentsModule,
     ExamplesModule,
     AppRoutingModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [ProductService,CategoryProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
