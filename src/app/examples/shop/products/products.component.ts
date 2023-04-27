@@ -6,7 +6,12 @@ import { ProductService } from 'app/services/product.service';
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
-  styleUrls: ['./products.component.scss']
+  styleUrls: ['./products.component.scss',
+  '../../../../assets/front/css/bootsrap.css',
+  '../../../../assets/front/css/bootsrap.css'
+
+  '../../../../assets/front/demo/demo.css',
+  '../../../../assets/front/css/bootstrap.min.css']
 })
 export class ProductsComponent {
 

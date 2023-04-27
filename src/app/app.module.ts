@@ -25,7 +25,6 @@ import { ExamplesModule } from './examples/examples.module';
     FormsModule,
     RouterModule,
     ComponentsModule,
-    ExamplesModule,
     AppRoutingModule,
   ],
   providers: [],
