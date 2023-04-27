@@ -1,155 +1,101 @@
-<div class="page-header"  >
-    <div class="container-fluid m-0 p-0">
 
-        <!--Google map-->
-       <div id="map-container" class="z-depth-1-half map-container" style="height: 100vh; width: 100%;">
-         <iframe src="https://maps.google.com/maps?q=manhattan&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
-           style="border:0; height: 100%; width: 100%;" allowfullscreen></iframe>
-       </div>
-       
-               </div>
-</div>
- 
 <div class="container">
     <div class="row">
 <div class="main">
-    <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet" id="bootstrap-css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <div class="col-lg-9 my-lg-0 my-1" >
-        <div id="main-content" class="bg-white border">
-            <div class="d-flex flex-column">
-                <div class="h5">Hello Mathlouthi,</div>
-                <div>Logged in as: someone@gmail.com</div>
-            </div>
-            <div class="d-flex my-4 flex-wrap">
-                <div class="box me-4 my-1 bg-light">
-                    <img src="https://www.freepnglogos.com/uploads/box-png/cardboard-box-brown-vector-graphic-pixabay-2.png"
-                        alt="">
-                    <div class="d-flex align-items-center mt-2">
-                        <div class="tag">Orders placed</div>
-                        <div class="ms-auto number">10</div>
-                    </div>
-                </div>
-                <div class="box me-4 my-1 bg-light">
-                    <img src="https://www.freepnglogos.com/uploads/shopping-cart-png/shopping-cart-campus-recreation-university-nebraska-lincoln-30.png"
-                        alt="">
-                    <div class="d-flex align-items-center mt-2">
-                        <div class="tag">Items in Cart</div>
-                        <div class="ms-auto number">10</div>
-                    </div>
-                </div>
-                <div class="box me-4 my-1 bg-light">
-                    <img src="https://www.freepnglogos.com/uploads/love-png/love-png-heart-symbol-wikipedia-11.png"
-                        alt="">
-                    <div class="d-flex align-items-center mt-2">
-                        <div class="tag">Wishlist</div>
-                        <div class="ms-auto number">10</div>
-                    </div>
+    <link href="http://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet" id="bootstrap-css">
+    <link href="http://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="http://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" />
+<div class="container bootdey">
+    <div class="panel panel-default panel-order">
+        <div class="panel-heading">
+            <strong>Order history</strong>
+            <div class="btn-group pull-right">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">Filter history <i class="fa fa-filter"></i></button>
+                    <ul class="dropdown-menu dropdown-menu-right">
+                        <li><a href="#">Approved orders</a></li>
+                        <li><a href="#">Pending orders</a></li>
+                    </ul>
                 </div>
             </div>
-            <div class="text-uppercase">My recent orders</div>
-            <div class="order my-3 bg-light">
-                <div class="row">
-                    <div class="col-lg-4">
-                        <div class="d-flex flex-column justify-content-between order-summary">
-                            <div class="d-flex align-items-center">
-                                <div class="text-uppercase">Order #fur10001</div>
-                                <div class="blue-label ms-auto text-uppercase">paid</div>
-                            </div>
-                            <div class="fs-8">Products #03</div>
-                            <div class="fs-8">22 August, 2020 | 12:05 PM</div>
-                            <div class="rating d-flex align-items-center pt-1">
-                                <img src="https://www.freepnglogos.com/uploads/like-png/like-png-hand-thumb-sign-vector-graphic-pixabay-39.png"
-                                    alt=""><span class="px-2">Rating:</span>
-                                <span class="fas fa-star"></span>
-                                <span class="fas fa-star"></span>
-                                <span class="fas fa-star"></span>
-                                <span class="fas fa-star"></span>
-                                <span class="far fa-star"></span>
-                            </div>
+        </div>
+
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-1"><img src="http://bootdey.com/img/Content/user_3.jpg" class="media-object img-thumbnail" /></div>
+                <div class="col-md-11">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="pull-right"><label class="label label-danger">rejected</label></div>
+                            <span><strong>Order name</strong></span> <span class="label label-info">group name</span><br />
+                            Quantity : 2, cost: $323.13 <br />
+                            <a data-placement="top" class="btn btn-success btn-xs glyphicon glyphicon-ok" href="#" title="View"></a>
+                            <a data-placement="top" class="btn btn-danger btn-xs glyphicon glyphicon-trash" href="#" title="Danger"></a>
+                            <a data-placement="top" class="btn btn-info btn-xs glyphicon glyphicon-usd" href="#" title="Danger"></a>
                         </div>
-                    </div>
-                    <div class="col-lg-8">
-                        <div class="d-sm-flex align-items-sm-start justify-content-sm-between">
-                            <div class="status">Status : Delivered</div>
-                            <div class="btn btn-primary text-uppercase">order info</div>
-                        </div>
-                        <div class="progressbar-track">
-                            <ul class="progressbar">
-                                <li id="step-1" class="text-muted green">
-                                    <span class="fas fa-gift"></span>
-                                </li>
-                                <li id="step-2" class="text-muted green">
-                                    <span class="fas fa-check"></span>
-                                </li>
-                                <li id="step-3" class="text-muted green">
-                                    <span class="fas fa-box"></span>
-                                </li>
-                                <li id="step-4" class="text-muted green">
-                                    <span class="fas fa-truck"></span>
-                                </li>
-                                <li id="step-5" class="text-muted green">
-                                    <span class="fas fa-box-open"></span>
-                                </li>
-                            </ul>
-                            <div id="tracker"></div>
-                        </div>
+                        <div class="col-md-12">order made on: 05/31/2014 by <a href="#">Jane Doe </a></div>
                     </div>
                 </div>
             </div>
-            <div class="order my-3 bg-light">
-                <div class="row">
-                    <div class="col-lg-4">
-                        <div class="d-flex flex-column justify-content-between order-summary">
-                            <div class="d-flex align-items-center">
-                                <div class="text-uppercase">Order #fur10001</div>
-                                <div class="green-label ms-auto text-uppercase">cod</div>
-                            </div>
-                            <div class="fs-8">Products #03</div>
-                            <div class="fs-8">22 August, 2020 | 12:05 PM</div>
-                            <div class="rating d-flex align-items-center pt-1">
-                                <img src="https://www.freepnglogos.com/uploads/like-png/like-png-hand-thumb-sign-vector-graphic-pixabay-39.png"
-                                    alt=""><span class="px-2">Rating:</span>
-                                <span class="fas fa-star"></span>
-                                <span class="fas fa-star"></span>
-                                <span class="fas fa-star"></span>
-                                <span class="fas fa-star"></span>
-                                <span class="far fa-star"></span>
-                            </div>
+
+            <div class="row">
+                <div class="col-md-1"><img src="http://bootdey.com/img/Content/user_1.jpg" class="media-object img-thumbnail" /></div>
+                <div class="col-md-11">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="pull-right"><label class="label label-info">pending</label></div>
+                            <span><strong>Order name</strong></span> <span class="label label-info">group name</span><br />
+                            Quantity : 12, cost: $12623.13<br />
+                            <a data-placement="top" class="btn btn-success btn-xs glyphicon glyphicon-ok" href="#" title="View"></a>
+                            <a data-placement="top" class="btn btn-danger btn-xs glyphicon glyphicon-trash" href="#" title="Danger"></a>
+                            <a data-placement="top" class="btn btn-info btn-xs glyphicon glyphicon-usd" href="#" title="Danger"></a>
                         </div>
+                        <div class="col-md-12">order made on: 06/12/2014 by <a href="#">Jane Doe </a></div>
                     </div>
-                    <div class="col-lg-8">
-                        <div class="d-sm-flex align-items-sm-start justify-content-sm-between">
-                            <div class="status">Status : Placed</div>
-                            <div class="btn btn-primary text-uppercase">order info</div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-1"><img src="http://bootdey.com/img/Content/user_3.jpg" class="media-object img-thumbnail" /></div>
+                <div class="col-md-11">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="pull-right"><div class="container bootstrap snippets bootdey">
+                                <button class="btn btn-outline-danger btn-round" (click)="open()">ok </button>
+                            </div><label class="label label-success">Approved</label></div>
+                            <span><strong>Order name</strong></span> <span class="label label-info">group name</span><br />
+                            Quantity : 4, cost: $523.13<br />
+                            <a data-placement="top" class="btn btn-success btn-xs glyphicon glyphicon-ok" href="#" title="View"></a>
+                            <a data-placement="top" class="btn btn-danger btn-xs glyphicon glyphicon-trash" href="#" title="Danger"></a>
+                            <a data-placement="top" class="btn btn-info btn-xs glyphicon glyphicon-usd" href="#" title="Danger"></a>
                         </div>
-                        <div class="progressbar-track">
-                            <ul class="progressbar">
-                                <li id="step-1" class="text-muted green">
-                                    <span class="fas fa-gift"></span>
-                                </li>
-                                <li id="step-2" class="text-muted">
-                                    <span class="fas fa-check"></span>
-                                </li>
-                                <li id="step-3" class="text-muted">
-                                    <span class="fas fa-box"></span>
-                                </li>
-                                <li id="step-4" class="text-muted">
-                                    <span class="fas fa-truck"></span>
-                                </li>
-                                <li id="step-5" class="text-muted">
-                                    <span class="fas fa-box-open"></span>
-                                </li>
-                            </ul>
-                            <div id="tracker"></div>
+                        <div class="col-md-12">order made on: 06/20/2014 by <a href="#">Jane Doe</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-1"><img src="http://bootdey.com/img/Content/user_2.jpg" class="media-object img-thumbnail" /></div>
+                <div class="col-md-11">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="pull-right"><label class="label label-info">pending</label></div>
+                            <span><strong>Order name</strong></span> <span class="label label-info">group name</span><br />
+                            Quantity : 4, cost: $523.13<br />
+                            <a data-placement="top" class="btn btn-success btn-xs glyphicon glyphicon-ok" href="#" title="View"></a>
+                            <a data-placement="top" class="btn btn-danger btn-xs glyphicon glyphicon-trash" href="#" title="Danger"></a>
+                            <a data-placement="top" class="btn btn-info btn-xs glyphicon glyphicon-usd" href="#" title="Danger"></a>
                         </div>
+                        <div class="col-md-12">order made on: 06/20/2014 by <a href="#">Jane Doe</a></div>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="panel-footer">Put here some note for example: bootdey si a gallery of free bootstrap snippets bootdeys</div>
     </div>
+</div>
 
 
 

@@ -18,7 +18,7 @@ export class CategoryProductService {
   constructor(private httpClient:HttpClient) { }
 
     addCategorie(category: CategoryProduct): Observable<any> {
-      return this.httpClient.post<any>(this.baseUrl + 'add', category);
+      return this.httpClient.post<any>('http://localhost:9090/category/add', category);
     }
 
     getProductCategories(): Observable<CategoryProduct[]> {

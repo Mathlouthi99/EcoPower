@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CategoryProduct } from 'app/entities/category-product';
+import { CategoryProductService } from 'app/services/category-product.service';
 
 @Component({
   selector: 'app-list-category',
@@ -11,5 +12,21 @@ import { CategoryProduct } from 'app/entities/category-product';
 })
 export class ListCategoryComponent {
   listCategory : Array<CategoryProduct>=[];
+  selectedCategory =null;
+  constructor(private categoryService:CategoryProductService) { }
+
+  ngOnInit(): void {
+    return this.getAllCategories();
+  }
+  getAllCategories(): void {
+    this.categoryService.getProductCategories().subscribe((data:CategoryProduct[])=>{
+      this.listCategory=data;
+    })
+
+}
+
+remove(id: number):void {
+  this.categoryService.deleteCategory(id).subscribe(()=>  (this.listCategory=this.listCategory.filter((t)=>t.id !==id)));
+}
 
 }

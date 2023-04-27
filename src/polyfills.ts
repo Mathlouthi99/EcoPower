@@ -15,7 +15,7 @@ import '@angular/localize/init';
  * automatically update themselves. This includes Safari >= 10, Chrome >= 55 (including Opera),
  * Edge >= 13 on the desktop, and iOS 10 and Chrome on mobile.
  *
- * Learn more in https://angular.io/docs/ts/latest/guide/browser-support.html
+ * Learn more in http://angular.io/docs/ts/latest/guide/browser-support.html
  */
 
 /***************************************************************************************************

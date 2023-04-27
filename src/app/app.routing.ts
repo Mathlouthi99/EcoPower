@@ -14,6 +14,11 @@ import { ListProductComponent } from './examples/admin/list-product/list-product
 import { ProductsComponent } from './examples/shop/products/products.component';
 import { ProductbycatComponent } from './examples/shop/productbycat/productbycat.component';
 import { DashboardComponent } from './examples/admin/dashboard/dashboard.component';
+import { OrdersComponent } from './examples/admin/orders/orders.component';
+import { UpdateOrderComponent } from './examples/admin/update-order/update-order.component';
+import { NgbdModalContent } from './components/modal/modal.component';
+import { AddCategoryComponent } from './examples/admin/add-category/add-category.component';
+import { AddProductComponent } from './examples/admin/add-product/add-product.component';
 
 const routes: Routes =[
     { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -27,7 +32,17 @@ const routes: Routes =[
     {path: 'products', component: ProductsComponent },
     {path: 'listProduct/:id', component: ProductbycatComponent },
     {path: 'shop', component: ProductsComponent },
-    {path: 'dashboard', component: DashboardComponent }
+    {path: 'dashboard', component: DashboardComponent },
+    {path: 'orders', component: OrdersComponent },
+    {path: 'updateorders', component: UpdateOrderComponent },
+    {path: 'modal', component: NgbdModalContent },
+    {path: 'addCategory', component: AddCategoryComponent},
+    {path: 'addProduct', component: AddProductComponent},
+
+
+
+
+
 
 
 
