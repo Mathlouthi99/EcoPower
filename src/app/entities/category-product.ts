@@ -2,9 +2,7 @@ import { Product } from "./product";
 
 
 export class CategoryProduct {
-    id!:number;
+    id!: number  ;
     name!:string;
-    type!:number;
-    productscat!:Product;
    
 }

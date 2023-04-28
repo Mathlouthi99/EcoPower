@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-dashboard',
@@ -9,6 +9,9 @@ import { Component } from '@angular/core';
   '../../../../assets/admin/css/bootstrap.min.css',
 ]
 })
-export class DashboardComponent {
-
-}
+export class DashboardComponent implements OnInit {
+  constructor() {}
+  
+  ngOnInit(): void {}
+  }
+  

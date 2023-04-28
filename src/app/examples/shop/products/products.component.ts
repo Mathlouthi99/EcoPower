@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { CategoryProduct } from 'app/entities/category-product';
 import { Product } from 'app/entities/product';
 import { ProductService } from 'app/services/product.service';
@@ -6,14 +6,10 @@ import { ProductService } from 'app/services/product.service';
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
-  styleUrls: ['./products.component.scss',
-  '../../../../assets/front/css/bootsrap.css',
-  '../../../../assets/front/css/bootsrap.css'
-
-  '../../../../assets/front/demo/demo.css',
-  '../../../../assets/front/css/bootstrap.min.css']
+  styleUrls: ['./products.component.scss'
+ ]
 })
-export class ProductsComponent {
+export class ProductsComponent implements OnInit{
 
   @Input() products: Product[] = [];
   productList: Array<Product> = [];

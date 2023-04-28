@@ -15,7 +15,7 @@ import { ProductService } from 'app/services/product.service';
 '../../../../assets/admin/demo/demo.css',
 '../../../../assets/admin/css/bootstrap.min.css',]
 })
-export class AddProductComponent {
+export class AddProductComponent implements OnInit {
   files: string[] = [];
   selectedFiles!: FileList;
   images: string[] = [];
@@ -46,9 +46,9 @@ export class AddProductComponent {
     this.productService.dataForm = this.fb.group({
       name: ['', [Validators.required]],
       description: ['', [Validators.required]],
-      price: [0, [Validators.required]],
+      prix: [0, [Validators.required]],
       quantity: [0, [Validators.required]],
-      productCategory: ['', [Validators.required]],
+      category: ['', [Validators.required]],
     });
   }
 
@@ -67,7 +67,7 @@ export class AddProductComponent {
 
     // formData.append('file', this.userFile);
     formData.append('file', this.file);
-    this.productService.addProduct(formData).subscribe((data) => {
+    this.productService.addTask(formData).subscribe((data) => {
       this.router.navigate(['/']);
     });
   }
