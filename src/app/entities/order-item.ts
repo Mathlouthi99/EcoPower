@@ -1,12 +1,19 @@
-import { Cart } from "./cart";
-import { OrderMain } from "./order-main";
+
+import { CartItem } from "./cart-item";
+
 
 export class OrderItem {
-    productName!:String;
-    productDescription!:String;
-    productPrice!:number;
-    productStock!:number;
-    count!:number;
-    orderMain!:OrderMain;
-    cart!:Cart;
+    imageUrl: string;
+    nprix: number;
+    gprix: number;
+    quantity: number;
+    productId: number;
+
+    constructor(cartItem: CartItem) {
+        this.imageUrl = cartItem.image;
+        this.quantity = cartItem.quantity;
+        this.nprix = cartItem.nprix;
+        this.gprix = cartItem.gprix;
+        this.productId = cartItem.id;
+    }
 }

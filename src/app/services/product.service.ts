@@ -69,19 +69,7 @@ export class ProductService {
     );
   }
 
-  addCom(c: Comment): Observable<Comment> {
-    return this.httpClient.post<Comment>(
-      'http://localhost:9090/comment/add-commentaire',
-      c
-    );
-  }
-
-  modifyCom(c: Comment): Observable<Comment> {
-    return this.httpClient.put<Comment>(
-      'http://localhost:9090/comment/modify-commentaire',
-      c
-    );
-  }
+ 
   getProductsbyPrice(minPrice: number, maxPrice:number) :Observable<Product[]> {
 
     return this.httpClient.get<Product[]>(this.baseUrl + 'getByPrice/' + minPrice +'/'+ maxPrice);

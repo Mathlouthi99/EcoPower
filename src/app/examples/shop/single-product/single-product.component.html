@@ -1,15 +1,49 @@
 <!-- ============== SECTION PAGETOP ============== -->
-<section class="bg-primary padding-y-sm">
+<div class="content">
+<header class="section-header">	
+  <section class="header-main">
     <div class="container">
-    
-      <ol class="breadcrumb ondark mb-0">
-      <li class="breadcrumb-item"><a href="#">Home</a></li>
-      <li class="breadcrumb-item"><a href="#">Library</a></li>
-      <li class="breadcrumb-item active" aria-current="page">Data</li>
-      </ol>
-    
-    </div> <!-- container //  -->
-    </section>
+      <div class="row gy-3 align-items-center">
+        <div class="col-lg-2 col-sm-4 col-4">
+          <a routerLink="/home" class="navbar-brand">
+            EcoPower
+          </a> <!-- brand end.// -->
+        </div>
+        <div class="order-lg-last col-lg-5 col-sm-8 col-8">
+          <div class="float-end">
+            <a href="#" class="btn btn-light"> 
+                <i class="fa fa-user"></i>  <span class="ms-1 d-none d-sm-inline-block">Sign in  </span> 
+            </a>
+            <a href="#" class="btn btn-light"> 
+              <i class="fa fa-heart"></i>  <span class="ms-1 d-none d-sm-inline-block">Wishlist</span>   
+            </a>
+            <a data-bs-toggle="offcanvas" routerLink="/cart" class="btn btn-light"> 
+              <i class="fa fa-shopping-cart"></i> <span class="ms-1">My cart </span> 
+            </a>
+              </div>
+        </div> <!-- col end.// -->
+        <div class="col-lg-5 col-md-12 col-12">
+          <form action="#" class="">
+                  <div class="input-group">
+                    <input type="search" class="form-control" style="width:55%" placeholder="Search">
+                    <select class="form-select">
+                      <option value="">All type</option>
+                      <option value="codex">Special</option>
+                      <option value="comments">Only best</option>
+                      <option value="content">Latest</option>
+                    </select>
+                    <button class="btn btn-primary">
+                      <i class="fa fa-search"></i> 
+                    </button>
+                  </div> <!-- input-group end.// -->
+                </form>
+        </div> <!-- col end.// -->
+        
+      </div> <!-- row end.// -->
+    </div> <!-- container end.// -->
+  </section> <!-- header-main end.// -->
+</header> <!-- section-header end.// -->
+
     <!-- ============== SECTION PAGETOP END// ============== -->
     
     <!-- ============== SECTION CONTENT ============== -->
@@ -18,10 +52,10 @@
     
     <div class="row">
     <aside class="col-lg-6">
-      <article class="gallery-wrap"> 
+      <article *ngFor="let p of productList" class="gallery-wrap"> 
       <div class="img-big-wrap img-thumbnail">
-         <a data-fslightbox="mygalley" data-type="image" href="assets/front/images/items/10.webp"> 
-          <img height="560" src="assets/front/images/items/10.webp"> 
+         <a data-fslightbox="mygalley" data-type="image" href=#> 
+          <img height="560" src="{{this.productService.baseUrl+'/Imgarticle/'+p.id}}"> 
          </a>
       </div> <!-- img-big-wrap.// -->
       <div class="thumbs-wrap">

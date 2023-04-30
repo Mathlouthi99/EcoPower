@@ -1,7 +1,11 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { CartItem } from 'app/entities/cart-item';
 import { CategoryProduct } from 'app/entities/category-product';
 import { Product } from 'app/entities/product';
+import { CartService } from 'app/services/cart.service';
 import { ProductService } from 'app/services/product.service';
+import { WishListService } from 'app/services/wish-list.service';
 
 @Component({
   selector: 'app-products',
@@ -18,15 +22,24 @@ export class ProductsComponent implements OnInit{
   maxPrice: number = 0;
   id:number = 0;
   Checked: boolean = false;
- 
+  files: any = [];
+  fav!:Product[];
 
-  constructor(public productService: ProductService) {}
+  constructor(
+    public productService: ProductService,
+    private cartService: CartService,
+    private route: ActivatedRoute,
+    private whishListService: WishListService) {}
 
   ngOnInit(): void {
     this.getProducts();
   
    
  }
+ addToCart(product: Product) {
+  const theCartItem = new CartItem(product);
+  this.cartService.addToCart(theCartItem);
+}
  
  getProducts(): void {
    this.productService.getProductList().subscribe((data: Product[]) => {
@@ -38,6 +51,25 @@ export class ProductsComponent implements OnInit{
      this.productList = data;
    });
  }
+
+ getProductImages() {
+  this.id = this.route.snapshot.params['id'];
+  this.productService.getImagesByProducts(this.id).subscribe((data) => {
+    this.files = data;
+  });
+}
+
+addToFav(id: number){
+  this.whishListService.addWishList(id).subscribe(data => {
+    console.log(data);
+  })
+}
+getfav(){
+  this.whishListService.getWishLists().subscribe(data => {
+    console.log(data);
+    this.fav = data;
+  })
+}
  
 
 

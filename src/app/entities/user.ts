@@ -1,13 +1,13 @@
-import { Cart } from "./cart";
+
 
 export class User {
-    id!:number;
-    email!:string;
-    password!:string;
-    name!:string;
-    phone!:string;
-    address!:string;
-    active!:boolean;
-    role!:string;
-    cart!:Cart;
+    id!: number;
+    fname!: string;
+    lname!: string;
+    email!: string;
+    password!: string;
+    phone!: string;
+    adress!: string;
+    token!: string;
+    enabled!:Boolean;
 }
