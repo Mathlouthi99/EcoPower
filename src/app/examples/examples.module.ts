@@ -6,7 +6,6 @@ import { LandingComponent } from './landing/landing.component';
 import { ProfileComponent } from './profile/profile.component';
 import { SignupComponent } from './signup/signup.component';
 import { ListCategoryComponent } from './admin/list-category/list-category.component';
-import { ListProductComponent } from './admin/list-product/list-product.component';
 import { ProductsComponent } from './shop/products/products.component';
 import { CartComponent } from './shop/cart/cart.component';
 import { CategoryProductComponent } from './shop/category-product/category-product.component';
@@ -26,12 +25,14 @@ import { HeaderComponent } from './shop/header/header.component';
 import { FooterComponent } from './shop/footer/footer.component';
 
 
+
 @NgModule({
     imports: [
         CommonModule,
         FormsModule,
         NgbModule,
-        ReactiveFormsModule,
+        ReactiveFormsModule
+
     
         
         
@@ -42,21 +43,17 @@ import { FooterComponent } from './shop/footer/footer.component';
         LandingComponent,
         SignupComponent,
         ProfileComponent,
-        ListProductComponent,
-        ListCategoryComponent,
+
         ProductsComponent,
         CartComponent,
         CategoryProductComponent,
         ProductbycatComponent,
         SingleProductComponent,
         DashboardComponent,
-        SidebarComponent,
         OrdersComponent,
         UpdateOrderComponent,
-        AddProductComponent,
-        AddCategoryComponent,
+        
         UpdateProductComponent,
-        HeaderComponent,
         FooterComponent
 
         

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { CartItem } from 'app/entities/cart-item';
+import { Product } from 'app/entities/product';
 import { BehaviorSubject, Subject } from 'rxjs';
 
 @Injectable({
@@ -7,19 +8,21 @@ import { BehaviorSubject, Subject } from 'rxjs';
 })
 export class CartService {
   cartItems : CartItem[] = localStorage.getItem('cartItems') ? JSON.parse(localStorage.getItem('cartItems') || '{}') : [];
-
+  product:Product;
   totalPrice: Subject<number> = new BehaviorSubject<number>(0);
   totalQuantity: Subject<number> = new BehaviorSubject<number>(0);
-
+  maxQuantity: Product["quantity"];
 
   constructor() { }
+
+  
 
   addToCart(theCartItem: CartItem) {
 
     // check if we already have the item in our cart
     let alreadyExistsInCart: boolean = false;
     let existingCartItem: CartItem = undefined!;
-
+    
     if (this.cartItems.length > 0) {
       // find the item in the cart based on item id
 
@@ -29,9 +32,14 @@ export class CartService {
       alreadyExistsInCart = (existingCartItem != undefined);
     }
     
-    if (alreadyExistsInCart) {
+    if (alreadyExistsInCart  ) {
+      
       // increment the quantity
-      existingCartItem.quantity++;
+      existingCartItem.quantity++ ;
+      console.log(this.maxQuantity)
+      if (existingCartItem.quantity === this.maxQuantity){
+        console.log("not enough product")
+      }
     }
     else {
       // just add the item to the array

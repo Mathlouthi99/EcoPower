@@ -8,7 +8,7 @@
     </div!--> <!-- container //  -->
     
     <!-- ============== SECTION PAGETOP END// ============== -->
-    
+ 
     <section class="padding-y bg-light">
     <div class="container">
     
@@ -30,9 +30,10 @@
               </figure>
             </div>
             <div class="col-auto">
-              <select style="width: 100px" class="form-select">
-                <option>{{cartItem.quantity}}</option>
-              </select> 
+              <button (click)="incrementQuantity(cartItem)"    style="width: 25px" class="cart_quantity_up"> + </button> 
+              <input class="cart_quantity_input"  [style]="{'background-color':'white'}" type="submit" name="quantity" value="{{cartItem.quantity }}" autocomplete="off" size="2">
+              <button (click)="decrementQuantity(cartItem)"  style="width: 25px" class="cart_quantity_up"> - </button>
+              
             </div>
             <div class="col-lg-2 col-sm-4 col-6">
               <div class="price-wrap lh-sm"> 

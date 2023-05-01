@@ -1,11 +1,12 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CartItem } from 'app/entities/cart-item';
 import { CategoryProduct } from 'app/entities/category-product';
 import { Product } from 'app/entities/product';
 import { CartService } from 'app/services/cart.service';
 import { ProductService } from 'app/services/product.service';
 import { WishListService } from 'app/services/wish-list.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-products',
@@ -29,16 +30,29 @@ export class ProductsComponent implements OnInit{
     public productService: ProductService,
     private cartService: CartService,
     private route: ActivatedRoute,
+    private router: Router,
     private whishListService: WishListService) {}
 
   ngOnInit(): void {
     this.getProducts();
+    console.log(this.getProducts())
   
    
  }
  addToCart(product: Product) {
   const theCartItem = new CartItem(product);
   this.cartService.addToCart(theCartItem);
+  Swal.fire({
+    'icon': 'success',
+    'text': 'Product added successfully !'
+  })
+  this.router.navigateByUrl("/cart"),
+  err => {
+    Swal.fire({
+      'icon': 'error',
+      'text': 'Missed Information !'
+    })
+  }
 }
  
  getProducts(): void {

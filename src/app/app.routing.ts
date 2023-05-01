@@ -23,6 +23,7 @@ import { UpdateProductComponent } from './examples/admin/update-product/update-p
 import { CartComponent } from './examples/shop/cart/cart.component';
 import { SingleProductComponent } from './examples/shop/single-product/single-product.component';
 
+
 const routes: Routes =[
     { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: 'home',             component: ComponentsComponent },
@@ -42,7 +43,7 @@ const routes: Routes =[
     {path: 'cart', component: CartComponent },
     {path: 'modal', component: NgbdModalContent },
     {path: 'addCategory', component: AddCategoryComponent},
-    {path: 'add', component: AddProductComponent},
+    {path: 'addProduct', component: AddProductComponent},
     {path: 'updateProduct/:id', component: UpdateProductComponent },
 
 
