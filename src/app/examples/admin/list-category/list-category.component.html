@@ -45,21 +45,15 @@
             </a>
           </li>
           <li>
-            <a href="listProduct">
+            <a routerLink="/listProduct">
               <i class="nc-icon nc-shop"></i>
               <p>Products</p>
             </a>
           </li>
           <li>
-            <a href="listCategory">
+            <a routerLink="/listCategory">
               <i class="nc-icon nc-bag-16"></i>
               <p>Category Product</p>
-            </a>
-          </li>
-          <li>
-            <a routerLink="/admin/project">
-              <i class="nc-icon nc-bag-16"></i>
-              <p>Projects</p>
             </a>
           </li>
           <li>
@@ -79,10 +73,10 @@
           <div class="col-md-12">
             <div class="card">
               <div class="card-header">
-                <h4 class="card-title" style="margin-left: 40%; font-size:xx-large; color: coral;"> Category List</h4>
+                <h4 class="card-title" style="margin-left: 40%; font-size:xx-large; color: rgb(103, 255, 80);"> Category List</h4>
               </div>
               
-              <button type="button" routerLink="/addCategory" class="btn btn-outline-success" >Add Category</button>
+              <button type="button" routerLink="/addCategory" class="btn btn-secondary" >Add Category</button>
               <div  class="card-body">
                 <div class="table-responsive">
                   <table class="table">
@@ -90,10 +84,6 @@
                       <th>
                         Name
                       </th>
-                      <th>
-                        Type
-                      </th>
-                      
                       <th>
                         Update
                       </th>
@@ -107,10 +97,6 @@
                         <td>
                         {{c.name}}
                         </td>
-                        <td>
-                          {{c.type}}
-                          </td>
-                        
                         <td>
                             <button type="button" routerLink="/updateCategory"   class="btn btn-outline-warning">Update</button>
                         </td>

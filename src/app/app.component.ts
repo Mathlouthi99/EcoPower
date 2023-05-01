@@ -46,12 +46,25 @@ export class AppComponent implements OnInit {
         }
     }
 
-    removeNavbarAndFooter(): boolean {
-        const titlee = this.location.prepareExternalUrl(this.location.path());
-        if (titlee.includes('/signup')) {
-            return false;
-        } else {
-            return true;
-        }
+   // removeNavbarAndFooter(): boolean {
+   //     const titlee = this.location.prepareExternalUrl(this.location.path());
+    //    if (titlee.includes('/signup')) {
+     //       return false;
+    //    } else {
+    //        return true;
+    //    }
+  //  }
+
+  removeNavbarAndFooter(): boolean {
+    const titlee = this.location.prepareExternalUrl(this.location.path());
+    const excludedRoutes = ['/signup', '/listProduct', '/listCategory', '/addProduct', '/addCategory']; // add any other routes that should exclude the navbar and footer
+  
+    for (const route of excludedRoutes) {
+      if (titlee.includes(route)) {
+        return false;
+      }
     }
+  
+    return true;
+  }
 }

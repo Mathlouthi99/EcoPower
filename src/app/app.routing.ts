@@ -44,6 +44,7 @@ const routes: Routes =[
     {path: 'modal', component: NgbdModalContent },
     {path: 'addCategory', component: AddCategoryComponent},
     {path: 'addProduct', component: AddProductComponent},
+    {path: '/updateCategory', component: UpdateProductComponent},
     {path: 'updateProduct/:id', component: UpdateProductComponent },
 
 

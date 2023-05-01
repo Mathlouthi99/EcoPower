@@ -36,7 +36,7 @@ import { CommonModule } from '@angular/common';
     ListCategoryComponent,
     FooterComponent,
     AddProductComponent,
-        AddCategoryComponent,
+    AddCategoryComponent,
     
 
 
